@@ -1,3 +1,4 @@
+# Compare two version numbers to determine if $newDriverVersion is newer than $driverVersion 
 $driver = Get-WmiObject Win32_PnPSignedDriver | where {$_.devicename -like "*ethernet*" -and $_.driverprovidername -like "*intel*"}
 $driverVersion = $driver.driverversion
 $newDriverVersion = "12.18.9.10"
